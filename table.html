@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خطة التوجيهي - ٥٠ يوم للنجاح</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #F5C842;
+    --gold-light: #FFF0A0;
+    --dark: #0D0D1A;
+    --dark2: #151528;
+    --dark3: #1E1E38;
+    --green: #2ECC71;
+    --red: #E74C3C;
+    --blue: #3498DB;
+    --purple: #9B59B6;
+    --orange: #E67E22;
+    --teal: #1ABC9C;
+    --pink: #E91E8C;
+    --text: #F0EEF8;
+    --muted: #9090B0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Cairo', sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  .hero {
+    background: linear-gradient(135deg, #0D0D1A 0%, #1a0a2e 50%, #0D0D1A 100%);
+    padding: 50px 20px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(245,200,66,0.08) 0%, transparent 60%);
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 1; }
+  }
+
+  .hero h1 {
+    font-family: 'Tajawal', sans-serif;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 900;
+    color: var(--gold);
+    text-shadow: 0 0 40px rgba(245,200,66,0.5);
+    position: relative;
+    z-index: 1;
+    letter-spacing: -1px;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stars {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* STATS BAR */
+  .stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    background: var(--dark2);
+    border-bottom: 1px solid rgba(245,200,66,0.2);
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: 10px 20px;
+    background: var(--dark3);
+    border-radius: 12px;
+    border: 1px solid rgba(245,200,66,0.3);
+    min-width: 110px;
+  }
+
+  .stat-num {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* MAIN LAYOUT */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+  }
+
+  /* SECTION TITLE */
+  .section-title {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--gold);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(245,200,66,0.3);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* SUBJECTS GRID */
+  .subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  .subject-card {
+    background: var(--dark2);
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .subject-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  }
+
+  .subject-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 60px; height: 60px;
+    border-radius: 0 16px 0 60px;
+    opacity: 0.15;
+  }
+
+  .subject-card.math::before { background: var(--blue); }
+  .subject-card.arabic::before { background: var(--green); }
+  .subject-card.english::before { background: var(--purple); }
+  .subject-card.religion::before { background: var(--gold); }
+  .subject-card.geo::before { background: var(--teal); }
+  .subject-card.history::before { background: var(--orange); }
+  .subject-card.philosophy::before { background: var(--pink); }
+  .subject-card.sociology::before { background: var(--red); }
+  .subject-card.economy::before { background: #27AE60; }
+  .subject-card.stats::before { background: #2980B9; }
+
+  .subject-icon { font-size: 1.8rem; margin-bottom: 8px; }
+
+  .subject-name {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 4px;
+  }
+
+  .subject-weight {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .priority-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+
+  .priority-high { background: rgba(231,76,60,0.2); color: #FF6B6B; border: 1px solid rgba(231,76,60,0.4); }
+  .priority-med { background: rgba(230,126,34,0.2); color: #FFA040; border: 1px solid rgba(230,126,34,0.4); }
+  .priority-low { background: rgba(46,204,113,0.2); color: #55D98D; border: 1px solid rgba(46,204,113,0.4); }
+
+  .days-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(245,200,66,0.15);
+    border: 1px solid rgba(245,200,66,0.4);
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 8px;
+  }
+
+  /* WEEKLY SCHEDULE */
+  .week-block {
+    background: var(--dark2);
+    border-radius: 16px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden;
+  }
+
+  .week-header {
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .week-header:hover { background: rgba(255,255,255,0.03); }
+
+  .week-title {
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .week-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  .phase-1 { background: rgba(52,152,219,0.2); color: #74B9FF; border: 1px solid rgba(52,152,219,0.4); }
+  .phase-2 { background: rgba(46,204,113,0.2); color: #55D98D; border: 1px solid rgba(46,204,113,0.4); }
+  .phase-3 { background: rgba(231,76,60,0.2); color: #FF6B6B; border: 1px solid rgba(231,76,60,0.4); }
+
+  .toggle-icon {
+    color: var(--muted);
+    transition: transform 0.2s;
+    font-size: 1rem;
+  }
+
+  .week-body {
+    padding: 0 20px 20px;
+    display: none;
+  }
+
+  .week-block.open .week-body { display: block; }
+  .week-block.open .toggle-icon { transform: rotate(180deg); }
+
+  .day-row {
+    display: grid;
+    grid-template-columns: 90px 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .day-row:last-child { border-bottom: none; }
+
+  .day-name {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--gold);
+  }
+
+  .session {
+    background: var(--dark3);
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 0.82rem;
+    border-right: 3px solid transparent;
+    line-height: 1.5;
+  }
+
+  .session.math { border-color: var(--blue); }
+  .session.arabic { border-color: var(--green); }
+  .session.english { border-color: var(--purple); }
+  .session.religion { border-color: var(--gold); }
+  .session.geo { border-color: var(--teal); }
+  .session.history { border-color: var(--orange); }
+  .session.philosophy { border-color: var(--pink); }
+  .session.sociology { border-color: var(--red); }
+  .session.economy { border-color: #27AE60; }
+  .session.stats { border-color: #2980B9; }
+  .session.review { border-color: var(--muted); background: rgba(255,255,255,0.04); }
+
+  .session-label {
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .session-detail {
+    color: var(--muted);
+    font-size: 0.77rem;
+  }
+
+  /* DAILY SCHEDULE */
+  .daily-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .time-block {
+    background: var(--dark2);
+    border-radius: 14px;
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-top: 3px solid var(--gold);
+  }
+
+  .time-range {
+    font-size: 0.78rem;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .time-activity {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .time-note {
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+
+  /* TIPS */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  .tip-card {
+    background: var(--dark2);
+    border-radius: 14px;
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .tip-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .tip-title {
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  .tip-text {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* PROGRESS TIMELINE */
+  .timeline {
+    position: relative;
+    padding-right: 30px;
+    margin-bottom: 40px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    right: 9px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding-right: 25px;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    right: -26px;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    background: var(--dark);
+  }
+
+  .timeline-dot.done { background: var(--gold); }
+
+  .timeline-content {
+    background: var(--dark2);
+    border-radius: 12px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .timeline-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .timeline-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  /* MOTIVATIONAL FOOTER */
+  .footer-motivation {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--dark2), var(--dark3));
+    border-top: 2px solid rgba(245,200,66,0.3);
+    margin-top: 20px;
+  }
+
+  .footer-motivation h2 {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .footer-motivation p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .day-row { grid-template-columns: 70px 1fr; }
+    .day-row .session:last-child { grid-column: 2; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="stars">⭐ ⭐ ⭐</div>
+  <h1>خطتك لـ ٥٠ يوم — التوجيهي الأدبي</h1>
+  <p>منهاج فلسطيني | ١٠ مواد | ٥-٦ ساعات يومياً | من الصفر للتميز</p>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-num">٥٠</span>
+    <div class="stat-label">يوم</div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">١٠</span>
+    <div class="stat-label">مادة</div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">٥-٦</span>
+    <div class="stat-label">ساعة يومياً</div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">٢٥٠+</span>
+    <div class="stat-label">ساعة دراسة</div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num">٧</span>
+    <div class="stat-label">أسابيع</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- SUBJECTS -->
+  <div class="section-title">📚 المواد وأولوياتها</div>
+  <div class="subjects-grid">
+
+    <div class="subject-card english">
+      <div class="days-badge">١٢ يوم</div>
+      <div class="subject-icon">🇬🇧</div>
+      <div class="subject-name">الإنجليزي</div>
+      <div class="subject-weight">أعلى وزن — أضعف مادة</div>
+      <span class="priority-badge priority-high">🔴 أولوية قصوى</span>
+    </div>
+
+    <div class="subject-card math">
+      <div class="days-badge">١٠ أيام</div>
+      <div class="subject-icon">🔢</div>
+      <div class="subject-name">الرياضيات</div>
+      <div class="subject-weight">تحتاج تمرين يومي</div>
+      <span class="priority-badge priority-high">🔴 أولوية قصوى</span>
+    </div>
+
+    <div class="subject-card arabic">
+      <div class="days-badge">٩ أيام</div>
+      <div class="subject-icon">📖</div>
+      <div class="subject-name">اللغة العربية</div>
+      <div class="subject-weight">قواعد + أدب + نصوص</div>
+      <span class="priority-badge priority-high">🔴 أولوية عالية</span>
+    </div>
+
+    <div class="subject-card religion">
+      <div class="days-badge">٦ أيام</div>
+      <div class="subject-icon">☪️</div>
+      <div class="subject-name">التربية الدينية</div>
+      <div class="subject-weight">حفظ + فهم</div>
+      <span class="priority-badge priority-med">🟡 متوسطة</span>
+    </div>
+
+    <div class="subject-card geo">
+      <div class="days-badge">٥ أيام</div>
+      <div class="subject-icon">🌍</div>
+      <div class="subject-name">الجغرافيا</div>
+      <div class="subject-weight">خرائط + مفاهيم</div>
+      <span class="priority-badge priority-med">🟡 متوسطة</span>
+    </div>
+
+    <div class="subject-card history">
+      <div class="days-badge">٥ أيام</div>
+      <div class="subject-icon">🏛️</div>
+      <div class="subject-name">التاريخ</div>
+      <div class="subject-weight">أحداث + تسلسل</div>
+      <span class="priority-badge priority-med">🟡 متوسطة</span>
+    </div>
+
+    <div class="subject-card philosophy">
+      <div class="days-badge">٤ أيام</div>
+      <div class="subject-icon">🧠</div>
+      <div class="subject-name">الفلسفة والتربية الوطنية</div>
+      <div class="subject-weight">فهم + تحليل</div>
+      <span class="priority-badge priority-med">🟡 متوسطة</span>
+    </div>
+
+    <div class="subject-card sociology">
+      <div class="days-badge">٣ أيام</div>
+      <div class="subject-icon">👥</div>
+      <div class="subject-name">علم الاجتماع</div>
+      <div class="subject-weight">مفاهيم نظرية</div>
+      <span class="priority-badge priority-low">🟢 مرنة</span>
+    </div>
+
+    <div class="subject-card economy">
+      <div class="days-badge">٣ أيام</div>
+      <div class="subject-icon">💰</div>
+      <div class="subject-name">الاقتصاد</div>
+      <div class="subject-weight">نظري + تطبيقي</div>
+      <span class="priority-badge priority-low">🟢 مرنة</span>
+    </div>
+
+    <div class="subject-card stats">
+      <div class="days-badge">٣ أيام</div>
+      <div class="subject-icon">📊</div>
+      <div class="subject-name">الإحصاء</div>
+      <div class="subject-weight">تمارين + قوانين</div>
+      <span class="priority-badge priority-low">🟢 مرنة</span>
+    </div>
+
+  </div>
+
+  <!-- DAILY SCHEDULE -->
+  <div class="section-title">⏰ توزيع يومك (٥-٦ ساعات)</div>
+  <div class="daily-grid">
+    <div class="time-block">
+      <div class="time-range">٨:٠٠ - ١٠:٣٠</div>
+      <div class="time-activity">🎯 جلسة ١ — المادة الصعبة</div>
+      <div class="time-note">إنجليزي أو رياضيات — عقلك أصفى</div>
+    </div>
+    <div class="time-block">
+      <div class="time-range">١٠:٣٠ - ١٠:٤٥</div>
+      <div class="time-activity">☕ استراحة</div>
+      <div class="time-note">ابعد عن الموبايل</div>
+    </div>
+    <div class="time-block">
+      <div class="time-range">١٠:٤٥ - ١٣:٠٠</div>
+      <div class="time-activity">📚 جلسة ٢ — المادة الثانية</div>
+      <div class="time-note">عربي أو مادة نظرية</div>
+    </div>
+    <div class="time-block">
+      <div class="time-range">١٣:٠٠ - ١٥:٠٠</div>
+      <div class="time-activity">😴 راحة + غداء + صلاة</div>
+      <div class="time-note">لازم تجدد طاقتك</div>
+    </div>
+    <div class="time-block">
+      <div class="time-range">١٥:٠٠ - ١٦:٣٠</div>
+      <div class="time-activity">🔁 مراجعة سريعة</div>
+      <div class="time-note">راجع ما درسته صباحاً</div>
+    </div>
+    <div class="time-block">
+      <div class="time-range">٢١:٠٠ - ٢٢:٠٠</div>
+      <div class="time-activity">📝 حفظ قبل النوم</div>
+      <div class="time-note">دين أو نصوص عربي — النوم يثبّت الحفظ</div>
+    </div>
+  </div>
+
+  <!-- PHASE TIMELINE -->
+  <div class="section-title">🗓️ مراحل الخطة الخمسين يوماً</div>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-dot done"></div>
+      <div class="timeline-content">
+        <div class="timeline-title">📘 المرحلة ١: أيام ١–١٥ | بناء الأساس</div>
+        <div class="timeline-desc">
+          <strong>الإنجليزي (يومياً):</strong> قواعد Grammar من صفر — جمل، أزمنة، مفردات ٢٠ كلمة يوم<br>
+          <strong>الرياضيات:</strong> أسس التفاضل والتكامل، حل ١٥ تمرين يومياً<br>
+          <strong>العربي:</strong> القواعد النحوية كاملة (الإعراب، الجمل، الأساليب)<br>
+          <br>الهدف: تأسيس قوي في أصعب ٣ مواد قبل الباقي
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-title">📗 المرحلة ٢: أيام ١٦–٣٠ | التوسع</div>
+        <div class="timeline-desc">
+          <strong>الإنجليزي:</strong> تعابير كتابية + محادثة + essays<br>
+          <strong>الرياضيات:</strong> إحصاء + امتحانات سابقة<br>
+          <strong>التاريخ + الجغرافيا:</strong> ختم كامل المنهج مع ملخصات<br>
+          <strong>الدين:</strong> حفظ الآيات والأحاديث + الفقه<br>
+          <br>الهدف: ختم ٦ مواد بالكامل
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-title">📙 المرحلة ٣: أيام ٣١–٤٠ | المواد المتبقية</div>
+        <div class="timeline-desc">
+          <strong>الفلسفة والتربية الوطنية:</strong> المفاهيم + الأسئلة المتوقعة<br>
+          <strong>الاجتماع + الاقتصاد:</strong> ملخصات مكثفة + أسئلة قديمة<br>
+          <strong>العربي:</strong> الأدب + النصوص + التعبير<br>
+          <br>الهدف: ختم كل المواد العشر
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <div class="timeline-title">🔥 المرحلة ٤: أيام ٤١–٥٠ | المراجعة المكثفة</div>
+        <div class="timeline-desc">
+          <strong>كل يوم:</strong> مادة كاملة — امتحان تجريبي من أسئلة سابقة<br>
+          <strong>ترتيب المراجعة:</strong> إنجليزي، رياضيات، عربي، دين، تاريخ، جغرافيا، فلسفة، اجتماع، اقتصاد، إحصاء<br>
+          <strong>اليوم الأخير:</strong> راحة كاملة + نوم مبكر<br>
+          <br>الهدف: تثبيت كل شيء + بناء الثقة
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WEEKLY PLAN -->
+  <div class="section-title">📅 الجدول الأسبوعي التفصيلي</div>
+
+  <!-- Week 1 -->
+  <div class="week-block open">
+    <div class="week-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="week-title">
+        <span>الأسبوع الأول (أيام ١–٧)</span>
+        <span class="week-badge phase-1">تأسيس الإنجليزي والرياضيات</span>
+      </div>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="week-body">
+      <div class="day-row">
+        <div class="day-name">الأحد</div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">Present & Past Tenses + ٢٠ مفردة</div></div>
+        <div class="session math"><div class="session-label">🔢 رياضيات</div><div class="session-detail">مراجعة الجبر الأساسي</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الاثنين</div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">Future Tenses + Reading Comprehension</div></div>
+        <div class="session arabic"><div class="session-label">📖 عربي</div><div class="session-detail">المبتدأ والخبر + الإعراب</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الثلاثاء</div>
+        <div class="session math"><div class="session-label">🔢 رياضيات</div><div class="session-detail">المشتقات — التعريف والقواعد</div></div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">Conditionals + ٢٠ مفردة</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الأربعاء</div>
+        <div class="session arabic"><div class="session-label">📖 عربي</div><div class="session-detail">الأفعال وأنواعها + الجملة الفعلية</div></div>
+        <div class="session math"><div class="session-label">🔢 رياضيات</div><div class="session-detail">قواعد الاشتقاق (الجمع، الضرب)</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الخميس</div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">Passive Voice + Writing Paragraph</div></div>
+        <div class="session math"><div class="session-label">🔢 رياضيات</div><div class="session-detail">تمارين مشتقات — ١٥ سؤال</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الجمعة</div>
+        <div class="session review"><div class="session-label">🔁 مراجعة شاملة</div><div class="session-detail">إعادة كل ما درسته هذا الأسبوع</div></div>
+        <div class="session religion"><div class="session-label">☪️ دين</div><div class="session-detail">حفظ + فقه العبادات</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">السبت</div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">اختبار تجريبي إنجليزي — ساعة كاملة</div></div>
+        <div class="session arabic"><div class="session-label">📖 عربي</div><div class="session-detail">الأساليب (نداء، استفهام، شرط)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 2 -->
+  <div class="week-block">
+    <div class="week-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="week-title">
+        <span>الأسبوع الثاني (أيام ٨–١٤)</span>
+        <span class="week-badge phase-1">تكميل القواعد + بدء الأدب والتاريخ</span>
+      </div>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="week-body">
+      <div class="day-row">
+        <div class="day-name">الأحد</div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">Reported Speech + Essay Writing</div></div>
+        <div class="session history"><div class="session-label">🏛️ تاريخ</div><div class="session-detail">الثورة الصناعية + الحرب العالمية ١</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الاثنين</div>
+        <div class="session math"><div class="session-label">🔢 رياضيات</div><div class="session-detail">التكامل — التعريف + القواعد الأساسية</div></div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">Relative Clauses + ٢٠ مفردة</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الثلاثاء</div>
+        <div class="session arabic"><div class="session-label">📖 عربي</div><div class="session-detail">الأدب الجاهلي + نص معلقة</div></div>
+        <div class="session geo"><div class="session-label">🌍 جغرافيا</div><div class="session-detail">جغرافيا فلسطين + الموقع والمساحة</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الأربعاء</div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">Reading + Vocabulary Revision</div></div>
+        <div class="session math"><div class="session-label">🔢 رياضيات</div><div class="session-detail">تمارين تكامل — ١٥ سؤال</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الخميس</div>
+        <div class="session history"><div class="session-label">🏛️ تاريخ</div><div class="session-detail">الحرب العالمية ٢ + النكبة</div></div>
+        <div class="session arabic"><div class="session-label">📖 عربي</div><div class="session-detail">الأدب الأموي + أبو تمام</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الجمعة</div>
+        <div class="session religion"><div class="session-label">☪️ دين</div><div class="session-detail">السيرة النبوية + معاملات</div></div>
+        <div class="session review"><div class="session-label">🔁 مراجعة</div><div class="session-detail">مراجعة الأسبوعين + ملخصات</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">السبت</div>
+        <div class="session geo"><div class="session-label">🌍 جغرافيا</div><div class="session-detail">المناخ + الموارد الطبيعية</div></div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">اختبار تجريبي + تصحيح</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 3 -->
+  <div class="week-block">
+    <div class="week-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="week-title">
+        <span>الأسبوع الثالث (أيام ١٥–٢١)</span>
+        <span class="week-badge phase-2">ختم الجغرافيا + التاريخ + الدين</span>
+      </div>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="week-body">
+      <div class="day-row">
+        <div class="day-name">الأحد</div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">Grammar Review + Mock Test</div></div>
+        <div class="session geo"><div class="session-label">🌍 جغرافيا</div><div class="session-detail">السكان + التوزيع الجغرافي</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الاثنين</div>
+        <div class="session history"><div class="session-label">🏛️ تاريخ</div><div class="session-label">القضية الفلسطينية + المقاومة</div></div>
+        <div class="session arabic"><div class="session-label">📖 عربي</div><div class="session-detail">الأدب الحديث + محمود درويش</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الثلاثاء</div>
+        <div class="session religion"><div class="session-label">☪️ دين</div><div class="session-detail">القرآن الكريم + التفسير</div></div>
+        <div class="session math"><div class="session-label">🔢 رياضيات</div><div class="session-detail">أسئلة امتحانات سابقة</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الأربعاء</div>
+        <div class="session geo"><div class="session-label">🌍 جغرافيا</div><div class="session-detail">اختبار تجريبي جغرافيا كامل</div></div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">Writing Skills — Formal Letter</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الخميس</div>
+        <div class="session arabic"><div class="session-label">📖 عربي</div><div class="session-detail">التعبير الكتابي + الرسالة والمقال</div></div>
+        <div class="session religion"><div class="session-label">☪️ دين</div><div class="session-detail">اختبار تجريبي دين كامل</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">الجمعة</div>
+        <div class="session review"><div class="session-label">🔁 مراجعة عامة</div><div class="session-detail">ملخصات المواد المنتهية</div></div>
+        <div class="session history"><div class="session-label">🏛️ تاريخ</div><div class="session-detail">اختبار تجريبي تاريخ كامل</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">السبت</div>
+        <div class="session math"><div class="session-label">🔢 رياضيات</div><div class="session-detail">الاحتمالات والإحصاء</div></div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">اختبار تجريبي شامل</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 4-5 -->
+  <div class="week-block">
+    <div class="week-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="week-title">
+        <span>الأسابيع ٤–٥ (أيام ٢٢–٣٥)</span>
+        <span class="week-badge phase-2">الفلسفة + الاجتماع + الاقتصاد</span>
+      </div>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="week-body">
+      <div class="day-row">
+        <div class="day-name">أيام ٢٢-٢٤</div>
+        <div class="session philosophy"><div class="session-label">🧠 فلسفة</div><div class="session-detail">المذاهب الفلسفية + التربية الوطنية والمدنية</div></div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">مراجعة يومية ٤٥ دقيقة + تمارين</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">أيام ٢٥-٢٧</div>
+        <div class="session sociology"><div class="session-label">👥 اجتماع</div><div class="session-detail">مفاهيم علم الاجتماع + المجتمع الفلسطيني</div></div>
+        <div class="session math"><div class="session-label">🔢 رياضيات</div><div class="session-detail">امتحانات سابقة يومياً</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">أيام ٢٨-٣٠</div>
+        <div class="session economy"><div class="session-label">💰 اقتصاد</div><div class="session-detail">العرض والطلب + الاقتصاد الكلي</div></div>
+        <div class="session arabic"><div class="session-label">📖 عربي</div><div class="session-detail">مراجعة نهائية القواعد</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">أيام ٣١-٣٥</div>
+        <div class="session stats"><div class="session-label">📊 إحصاء</div><div class="session-detail">القوانين + تمارين + اختبارات</div></div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي</div><div class="session-detail">Final Revision — كامل المنهج</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Week 6-7 - Final Review -->
+  <div class="week-block">
+    <div class="week-header" onclick="this.parentElement.classList.toggle('open')">
+      <div class="week-title">
+        <span>الأسابيع ٦–٧ (أيام ٣٦–٥٠)</span>
+        <span class="week-badge phase-3">🔥 المراجعة المكثفة النهائية</span>
+      </div>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="week-body">
+      <div class="day-row">
+        <div class="day-name">يوم ٣٦</div>
+        <div class="session english"><div class="session-label">🇬🇧 إنجليزي كامل</div><div class="session-detail">امتحان تجريبي بظروف حقيقية — ٣ ساعات</div></div>
+        <div class="session review"><div class="session-label">تصحيح + مراجعة</div><div class="session-detail">راجع كل غلطة وافهم سببها</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">يوم ٣٧</div>
+        <div class="session math"><div class="session-label">🔢 رياضيات كامل</div><div class="session-detail">امتحان تجريبي + حل ٢٠ سؤال متنوع</div></div>
+        <div class="session review"><div class="session-label">تصحيح فوري</div><div class="session-detail">حل الأسئلة الغلط مرتين</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">يوم ٣٨</div>
+        <div class="session arabic"><div class="session-label">📖 عربي كامل</div><div class="session-detail">قواعد + أدب + تعبير + نصوص</div></div>
+        <div class="session review"><div class="session-label">تصحيح</div><div class="session-detail">راجع التعبير وقيّم نفسك</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">يوم ٣٩</div>
+        <div class="session religion"><div class="session-label">☪️ دين</div><div class="session-detail">ختم الحفظ + امتحان تجريبي</div></div>
+        <div class="session history"><div class="session-label">🏛️ تاريخ</div><div class="session-detail">مراجعة سريعة ملخصات</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">يوم ٤٠</div>
+        <div class="session geo"><div class="session-label">🌍 جغرافيا</div><div class="session-detail">الخرائط + امتحان تجريبي</div></div>
+        <div class="session philosophy"><div class="session-label">🧠 فلسفة</div><div class="session-detail">مراجعة المفاهيم والأسئلة</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">أيام ٤١-٤٨</div>
+        <div class="session review"><div class="session-label">🔁 دوران شامل</div><div class="session-detail">يوم لكل مادة — تدريب على أسئلة التوجيهي القديمة</div></div>
+        <div class="session english"><div class="session-label">🇬🇧 يومياً</div><div class="session-detail">ساعة إنجليزي ثابتة كل يوم بدون استثناء</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">يوم ٤٩</div>
+        <div class="session review"><div class="session-label">📋 يوم المراجعات</div><div class="session-detail">راجع ملخصاتك فقط — لا تحفظ جديد</div></div>
+        <div class="session review"><div class="session-label">😴 نوم مبكر</div><div class="session-detail">نم الساعة ١٠ مساءً</div></div>
+      </div>
+      <div class="day-row">
+        <div class="day-name">يوم ٥٠</div>
+        <div class="session review"><div class="session-label">🌟 يوم الامتحان</div><div class="session-detail">فطور جيد + لا دراسة — ثق بنفسك</div></div>
+        <div class="session review"><div class="session-label">💪 أنت قادر</div><div class="session-detail">٥٠ يوم من العمل يتحدث عنك</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIPS -->
+  <div class="section-title" style="margin-top:40px">💡 أسرار النتيجة العالية</div>
+  <div class="tips-grid">
+
+    <div class="tip-card">
+      <div class="tip-icon">🇬🇧</div>
+      <div>
+        <div class="tip-title">الإنجليزي كل يوم بدون استثناء</div>
+        <div class="tip-text">حتى لو ٣٠ دقيقة — لا تترك يوماً بدون إنجليزي. القواعد تحتاج تكرار يومي تتثبت.</div>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-icon">📝</div>
+      <div>
+        <div class="tip-title">حل أسئلة توجيهي قديمة</div>
+        <div class="tip-text">من سنة ٢٠١٨ لـ٢٠٢٣ — هذا أقوى تحضير. الأسئلة تتكرر بنسبة ٦٠٪ أحياناً.</div>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-icon">🧠</div>
+      <div>
+        <div class="tip-title">قاعدة الـ Pomodoro</div>
+        <div class="tip-text">٢٥ دقيقة دراسة + ٥ دقيقة راحة — تحمي تركيزك وتمنع الإرهاق الذهني.</div>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-icon">📖</div>
+      <div>
+        <div class="tip-title">ملخصات بخطك</div>
+        <div class="tip-text">اكتب ملخص لكل وحدة بعد الانتهاء منها. الكتابة تثبّت المعلومة أكثر من القراءة.</div>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-icon">😴</div>
+      <div>
+        <div class="tip-title">النوم ٨ ساعات — ليس رفاهية</div>
+        <div class="tip-text">الدماغ يحفظ المعلومات أثناء النوم. السهر يضر أكثر مما ينفع.</div>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-icon">🔢</div>
+      <div>
+        <div class="tip-title">الرياضيات: تمارين لا نظرية</div>
+        <div class="tip-text">لا تقرأ الرياضيات — حلّها. ١٠ تمارين يومياً أقوى من ساعتين قراءة.</div>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-icon">📅</div>
+      <div>
+        <div class="tip-title">علّم على كل ما تنهيه</div>
+        <div class="tip-text">جدول التقدم مهم نفسياً — كل علامة صح تزيد دافعيتك للاستمرار.</div>
+      </div>
+    </div>
+
+    <div class="tip-card">
+      <div class="tip-icon">🎯</div>
+      <div>
+        <div class="tip-title">الاتساق أهم من الكثافة</div>
+        <div class="tip-text">٥ ساعات يومياً لـ٥٠ يوم أفضل من ١٢ ساعة أسبوعياً. لا تنقطع.</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer-motivation">
+  <h2>🌟 أنت قادر على التميز</h2>
+  <p>
+    كل ساعة تدرسها الآن هي استثمار في مستقبلك.
+    الطريق الوحيد الذي لا يوصل هو الذي لا تسلكه.
+    ابدأ اليوم، والتزم، والنتيجة ستتكلم عنك.
+  </p>
+  <div style="margin-top:20px; font-size:1.3rem">🇵🇸 بالتوفيق يا بطل</div>
+</div>
+
+</body>
